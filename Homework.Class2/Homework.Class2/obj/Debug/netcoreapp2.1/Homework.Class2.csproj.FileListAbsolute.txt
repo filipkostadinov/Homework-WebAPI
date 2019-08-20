@@ -1,0 +1,14 @@
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\bin\Debug\netcoreapp2.1\Homework.Class2.deps.json
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\bin\Debug\netcoreapp2.1\Homework.Class2.runtimeconfig.json
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\bin\Debug\netcoreapp2.1\Homework.Class2.runtimeconfig.dev.json
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\bin\Debug\netcoreapp2.1\Homework.Class2.dll
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\obj\Debug\netcoreapp2.1\Homework.Class2.csprojAssemblyReference.cache
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\obj\Debug\netcoreapp2.1\Homework.Class2.csproj.CoreCompileInputs.cache
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\obj\Debug\netcoreapp2.1\Homework.Class2.RazorAssemblyInfo.cache
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\obj\Debug\netcoreapp2.1\Homework.Class2.RazorAssemblyInfo.cs
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\obj\Debug\netcoreapp2.1\Homework.Class2.AssemblyInfoInputs.cache
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\obj\Debug\netcoreapp2.1\Homework.Class2.AssemblyInfo.cs
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\obj\Debug\netcoreapp2.1\Homework.Class2.RazorTargetAssemblyInfo.cache
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\bin\Debug\netcoreapp2.1\Homework.Class2.pdb
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\obj\Debug\netcoreapp2.1\Homework.Class2.dll
+C:\Users\Filip Kostadinov\source\repos\Homework.Class2\Homework.Class2\obj\Debug\netcoreapp2.1\Homework.Class2.pdb
