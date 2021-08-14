@@ -19,7 +19,7 @@ namespace Services
             _ticketRepository = ticketRepo;
         }
 
-        public SessionModel CloseSession(Session session)
+        public IEnumerable<WinnerModel> CloseSession(Session session)
         {
             List<int> numbers = new List<int>();
             int count = 0;
@@ -60,17 +60,12 @@ namespace Services
                     _ticketRepository.Update(ticket);
                 }
             }
+
             return GetWinners(session.Id);
         }
 
-        public SessionModel GetWinners(int sessionId)
+        public IEnumerable<WinnerModel> GetWinners(int sessionId)
         {
-            var session = _sessionRepository.GetById(sessionId);
-
-            if (session == null || session.IsOpen)
-            {
-                return null;
-            }
             var winners = _ticketRepository
                 .GetAll()
                 .Where(x => x.SessionId == sessionId && x.IsWinner)
@@ -81,15 +76,11 @@ namespace Services
                     ChosenNumbers = x.ChosenNumbers.Split('-').Select(n => Convert.ToInt32(n)).ToList(),
                     Prize = (Prize)x.Prize
                 });
-            var sessionModel = new SessionModel()
-            {
-                DrawnNumbers = session.DrawnNumbers.Split('-').Select(x => Convert.ToInt32(x)).ToList(),
-                Winners = winners
-            };
-            return sessionModel;
+
+            return winners;
         }
 
-        public SessionModel OpenSession(int adminId)
+        public IEnumerable<WinnerModel> OpenSession(int adminId)
         {
             Session session = new Session()
             {

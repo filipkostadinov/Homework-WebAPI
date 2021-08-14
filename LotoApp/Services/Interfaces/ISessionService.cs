@@ -9,8 +9,8 @@ namespace Services
     public interface ISessionService
     {
         //IEnumerable<int> GetDrawnNumbers(int sessionId);
-        SessionModel CloseSession(Session session);
-        SessionModel GetWinners(int sessionId);
-        SessionModel OpenSession(int adminId);
+        IEnumerable<WinnerModel> CloseSession(Session session);
+        IEnumerable<WinnerModel> GetWinners(int sessionId);
+        IEnumerable<WinnerModel> OpenSession(int adminId);
     }
 }

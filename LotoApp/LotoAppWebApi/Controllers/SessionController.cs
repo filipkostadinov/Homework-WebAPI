@@ -20,25 +20,25 @@ namespace LotoAppWebApi.Controllers
             _sessionService = sessionService;
         }
         [HttpGet("{sessionId}")]
-        public ActionResult<SessionModel> GetWinners(int sessionId)
+        public ActionResult<IEnumerable<WinnerModel>> GetWinners(int sessionId)
         {
-            var sessionModel = _sessionService.GetWinners(sessionId);
-            if (sessionModel == null)
+            var winners = _sessionService.GetWinners(sessionId).ToList();
+            if (winners.Count() == 0)
             {
                 return NotFound("There is no winner in this session");
             }
-            return sessionModel;
+            return winners;
         }
         [HttpPost]
         public IActionResult OpenSession()
         {
             var adminId = GetAuthorizedUserId();
-            var sessionModel = _sessionService.OpenSession(adminId);
-            if (sessionModel == null || sessionModel.Winners.Count() == 0)
+            var winners = _sessionService.OpenSession(adminId);
+            if (winners == null || winners.Count() == 0)
             {
                 return NotFound("There is no winner in this session");
             }
-            return Ok(sessionModel);
+            return Ok(winners);
         }
 
         private int GetAuthorizedUserId()
