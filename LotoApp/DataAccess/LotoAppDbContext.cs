@@ -18,6 +18,7 @@ namespace DataAccess
         public DbSet<Admin> Admins { get; set; }
         public DbSet<Session> Sessions { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Test> Tests { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,6 +34,7 @@ namespace DataAccess
                 .HasMany(x => x.Sessions)
                 .WithOne(x => x.Admin)
                 .HasForeignKey(x => x.AdminId);
+            modelBuilder.Entity<Test>();
 
             var md5 = new MD5CryptoServiceProvider();
             var md5data = md5.ComputeHash(Encoding.ASCII.GetBytes("123Filip"));
